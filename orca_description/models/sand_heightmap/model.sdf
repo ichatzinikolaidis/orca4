@@ -26,6 +26,7 @@
             <uri>model://sand_heightmap/meshes/sandseabed.dae</uri>
           </mesh>
         </geometry>
+        <max_contacts>0</max_contacts>
       </collision>
       <visual name="ground_sand">
         <cast_shadows>true</cast_shadows>

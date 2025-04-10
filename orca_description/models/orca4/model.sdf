@@ -38,6 +38,7 @@
             <size>0.457 0.338 0.06506286173008947</size>
           </box>
         </geometry>
+        <max_contacts>0</max_contacts>
       </collision>
 
       <!-- IMU sensor gyro and accel data will be sent to ArduSub -->

@@ -18,7 +18,6 @@
     <plugin
         filename="gz-sim-sensors-system"
         name="gz::sim::systems::Sensors">
-<!--      <render_engine>ogre</render_engine>-->
     </plugin>
 
     <!-- IMU plugin manages all IMU sensors -->
@@ -47,10 +46,10 @@
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sun</uri>
     </include>
 
-    <include>
+    <!-- <include>
      <uri>model://sand_heightmap</uri>
      <pose>0 7 -10 0 0 0</pose>
-    </include>
+    </include> -->
 
     <include>
       <uri>model://orca4</uri>
