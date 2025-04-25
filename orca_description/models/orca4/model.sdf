@@ -23,10 +23,13 @@
 
       <visual name="base_link_visual">
         <geometry>
-          <mesh>
+          <!-- <mesh>
             <uri>model://orca4/meshes/bluerov2.dae</uri>
             <scale>0.025 0.025 0.025</scale>
-          </mesh>
+          </mesh> -->
+          <box>
+            <size>0.457 0.338 0.06506286173008947</size>
+          </box>
         </geometry>
       </visual>
 
@@ -83,14 +86,14 @@
 
     <link name="thruster1">
       <pose>0.14 -0.092 0 -1.5707963267948966 1.5707963267948966 -0.7853981633974483</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 1.5707963267948966 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-cw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -106,14 +109,14 @@
 
     <link name="thruster2">
       <pose>0.14 0.092 0 -1.5707963267948966 1.5707963267948966 -2.356194490192345</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.5707963267948966 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-ccw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -129,14 +132,14 @@
 
     <link name="thruster3">
       <pose>-0.14 -0.092 0 -1.5707963267948966 1.5707963267948966 0.7853981633974483</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.5707963267948966 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-ccw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -152,14 +155,14 @@
 
     <link name="thruster4">
       <pose>-0.14 0.092 0 -1.5707963267948966 1.5707963267948966 2.356194490192345</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 1.5707963267948966 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-cw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -175,14 +178,14 @@
 
     <link name="thruster5">
       <pose>0 -0.109 0.077 0 0 0</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.5707963267948966 0 1.5707963267948966</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-ccw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -198,14 +201,14 @@
 
     <link name="thruster6">
       <pose>0 0.109 0.077 0 0 0</pose>
-      <visual name="thruster_prop_visual">
+      <!-- <visual name="thruster_prop_visual">
         <pose>0 0 0 1.5707963267948966 0 1.5707963267948966</pose>
         <geometry>
           <mesh>
             <uri>model://orca4/meshes/t200-cw-prop.dae</uri>
           </mesh>
         </geometry>
-      </visual>
+      </visual> -->
       <inertial>
         <mass>0.002</mass>
         <inertia>
@@ -430,7 +433,7 @@
           </cylinder>
         </geometry>
       </visual>
-      <sensor name="left_camera" type="camera">
+      <!-- <sensor name="left_camera" type="camera">
         <pose>0 0 -0.08750000000000001 0 1.5707963267948966 0</pose>
         <camera>
           <horizontal_fov>1.4</horizontal_fov>
@@ -447,7 +450,7 @@
         <update_rate>5</update_rate>
         <visualize>true</visualize>
         <topic>stereo_left</topic>
-      </sensor>
+      </sensor> -->
       <inertial>
         <mass>0.001</mass>
         <inertia>
@@ -480,7 +483,7 @@
           </cylinder>
         </geometry>
       </visual>
-      <sensor name="right_camera" type="camera">
+      <!-- <sensor name="right_camera" type="camera">
         <pose>0 0 -0.08750000000000001 0 1.5707963267948966 0</pose>
         <camera>
           <horizontal_fov>1.4</horizontal_fov>
@@ -497,7 +500,7 @@
         <update_rate>5</update_rate>
         <visualize>true</visualize>
         <topic>stereo_right</topic>
-      </sensor>
+      </sensor> -->
       <inertial>
         <mass>0.001</mass>
         <inertia>
