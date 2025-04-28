@@ -11,6 +11,7 @@
 mavros:
   ros__parameters:
     system_id: 255
+    use_sim_time: true
 
     # /mavros/local_position/pose requires 2 plugins:
     #     imu handles the ATTITUDE_QUATERNION msg (MAV id 31)
