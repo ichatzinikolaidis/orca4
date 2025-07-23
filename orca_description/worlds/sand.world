@@ -33,7 +33,18 @@
         name="gz::sim::systems::DopplerVelocityLogSystem">
     </plugin>
 
-    <!-- Buoyancy plugin manages buoyancy for all models -->
+      <!-- DVL plugin manages the DVL sensor -->
+    <plugin
+      filename="gz-sim-dvl-system"
+      name="gz::sim::systems::DopplerVelocityLogSystem">
+    </plugin>
+
+    <plugin
+        filename="gz-sim-sensors-system"
+        name="gz::sim::systems::Sensors">
+    </plugin>
+
+        <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="gz-sim-buoyancy-system"
         name="gz::sim::systems::Buoyancy">
