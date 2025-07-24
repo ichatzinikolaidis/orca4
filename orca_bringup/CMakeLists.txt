@@ -20,4 +20,6 @@ install(
 
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.dsv.in")
 
-ament_auto_package(INSTALL_TO_SHARE behavior_trees cfg launch params)
+ament_auto_package(
+  USE_SCOPED_HEADER_INSTALL_DIR
+  INSTALL_TO_SHARE behavior_trees cfg launch params)
