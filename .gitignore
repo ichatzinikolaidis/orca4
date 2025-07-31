@@ -1,4 +1,7 @@
 cmake-build-*
 .cmake-build-*
 .idea
+build/
+log/
+install/
 CONTRIBUTING.md

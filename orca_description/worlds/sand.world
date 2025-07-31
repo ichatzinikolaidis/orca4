@@ -18,7 +18,6 @@
     <plugin
         filename="gz-sim-sensors-system"
         name="gz::sim::systems::Sensors">
-<!--      <render_engine>ogre</render_engine>-->
     </plugin>
 
     <!-- IMU plugin manages all IMU sensors -->
@@ -26,8 +25,15 @@
         filename="libgz-sim-imu-system.so"
         name="gz::sim::systems::Imu">
     </plugin>
+    
+    <!-- DVL plugin manages the DVL sensor -->
+    <plugin
+        filename="libgz-sim-dvl-system.so"
+        name="gz::sim::systems::DopplerVelocityLogSystem">
+    </plugin>
 
-    <!-- Buoyancy plugin manages buoyancy for all models -->
+
+        <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="gz-sim-buoyancy-system"
         name="gz::sim::systems::Buoyancy">
