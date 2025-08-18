@@ -50,55 +50,69 @@
       </sensor>
 
       <!-- Bottom facing DVL sensor to measure the vehicle's velocity -->
-      <sensor
-          name="teledyne_pathfinder_dvl"
-          type="custom" gz:type="dvl">
-        <pose degrees="true">-0.60 0 -0.16 0 0 180</pose>
+      <sensor name="A50_Waterlinked" type="custom" gz:type="dvl">
+        <pose>0 0 0 0 0 0</pose>
         <always_on>1</always_on>
-        <update_rate>1</update_rate>
-        <topic>/dvl</topic>
+        <enable_metrics>true</enable_metrics>
+        <update_rate>8</update_rate>
+        <topic>/dvl/velocity</topic>
         <gz:dvl>
           <type>phased_array</type>
           <arrangement degrees="true">
             <beam id="1">
-              <aperture>2</aperture>
-              <rotation>45</rotation>
-              <tilt>30</tilt>
-            </beam>
-            <beam>
-              <aperture>2</aperture>
-              <rotation>135</rotation>
-              <tilt>30</tilt>
-            </beam>
-            <beam>
-              <aperture>2</aperture>
-              <rotation>-45</rotation>
-              <tilt>30</tilt>
-            </beam>
-            <beam>
-              <aperture>2</aperture>
+              <aperture>3</aperture>
               <rotation>-135</rotation>
-              <tilt>30</tilt>
+              <tilt>25</tilt>
+            </beam>
+            <beam>
+              <aperture>3</aperture>
+              <rotation>135</rotation>
+              <tilt>25</tilt>
+            </beam>
+            <beam>
+              <aperture>3</aperture>
+              <rotation>45</rotation>
+              <tilt>25</tilt>
+            </beam>
+            <beam>
+              <aperture>3</aperture>
+              <rotation>-45</rotation>
+              <tilt>25</tilt>
             </beam>
           </arrangement>
           <tracking>
+            <water_mass_mode>
+              <when>best</when>
+              <water_velocity>
+                <x>0.</x>
+                <y>0.</y>
+                <z>0.</z>
+              </water_velocity>
+              <boundaries>
+                <near>10.</near>
+                <far>50.</far>
+              </boundaries>
+              <bins>10</bins>
+              <noise type="gaussian">
+                <stddev>0.0</stddev>
+              </noise>
+              <visualize>true</visualize>
+            </water_mass_mode>
             <bottom_mode>
               <when>best</when>
               <noise type="gaussian">
-                <stddev>0.002</stddev>
+                <stddev>0.01</stddev>
               </noise>
-              <visualize>false</visualize>
+              <visualize>true</visualize>
             </bottom_mode>
           </tracking>
-          <resolution>0.01</resolution>
-          <maximum_range>100.</maximum_range>
-          <minimum_range>0.1</minimum_range>
-          <reference_frame>0 0 0 0 0 -1.570796</reference_frame>
+          <maximum_range>50.0</maximum_range>
+          <minimum_range>0.05</minimum_range>
+          <!-- ENU to FSD -->
+          <!-- <reference_frame>0 0 0 3.14 0 -1.57</reference_frame> -->
         </gz:dvl>
       </sensor>
-
     </link>
-  
 
     <!-- Hydrodynamics plugin -->
     <plugin
