@@ -54,7 +54,7 @@
         <pose>0 0 0 0 0 0</pose>
         <always_on>1</always_on>
         <enable_metrics>true</enable_metrics>
-        <update_rate>8</update_rate>
+        <update_rate>100</update_rate>
         <topic>/dvl/velocity</topic>
         <gz:dvl>
           <type>phased_array</type>
@@ -101,7 +101,7 @@
             <bottom_mode>
               <when>best</when>
               <noise type="gaussian">
-                <stddev>0.01</stddev>
+                <stddev>0.0</stddev>
               </noise>
               <visualize>true</visualize>
             </bottom_mode>
