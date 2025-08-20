@@ -44,14 +44,14 @@
       <sensor name="imu_sensor" type="imu">
         <!-- Transform from the Gazebo body frame (x-forward, y-left, z-up)
              to the ArduPilot body frame (x-forward, y-right, z-down) -->
-        <pose>0 0 0 3.141592653589793 0 0</pose>
+        <pose degrees="true">0 0 0 180 0 0</pose>
         <always_on>1</always_on>
-        <update_rate>1000.0</update_rate>
+        <update_rate>100.0</update_rate>
       </sensor>
 
       <!-- Bottom facing DVL sensor to measure the vehicle's velocity -->
-      <sensor name="A50_Waterlinked" type="custom" gz:type="dvl">
-        <pose>0 0 0 0 0 0</pose>
+      <sensor name="Waterlinked_A50" type="custom" gz:type="dvl">
+        <pose degrees="true">0.7 0.5 -0.9 15 -15 25</pose>
         <always_on>1</always_on>
         <enable_metrics>true</enable_metrics>
         <update_rate>100</update_rate>
@@ -108,8 +108,6 @@
           </tracking>
           <maximum_range>50.0</maximum_range>
           <minimum_range>0.05</minimum_range>
-          <!-- ENU to FSD -->
-          <!-- <reference_frame>0 0 0 3.14 0 -1.57</reference_frame> -->
         </gz:dvl>
       </sensor>
     </link>
@@ -586,7 +584,9 @@
         name="gz::sim::systems::OdometryPublisher">
       <odom_frame>map</odom_frame>
       <robot_base_frame>orca4</robot_base_frame>
+      <odom_publish_frequency>500</odom_publish_frequency>
       <dimensions>3</dimensions>
+      <gaussian_noise>0.0</gaussian_noise>
     </plugin>
   </model>
 </sdf>
