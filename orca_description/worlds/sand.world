@@ -26,10 +26,10 @@
     </plugin>
 
     <!-- DVL plugin manages the DVL sensor -->
-    <plugin
+    <!-- <plugin
       filename="libgz-sim-dvl-system.so"
       name="gz::sim::systems::DopplerVelocityLogSystem">
-    </plugin>
+    </plugin> -->
 
     <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
